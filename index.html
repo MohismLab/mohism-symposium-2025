@@ -12,17 +12,38 @@
       line-height: 1.6;
       background-color: #f0f2f5;
     }
-    header {
-      background: linear-gradient(90deg, #004d7a, #008793);
-      color: #fff;
-      padding: 30px 0;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .main-image {
+    .hero {
+      position: relative;
       width: 100%;
-      max-height: 320px;
-      object-fit: cover;
+      height: 320px;
+      background-image: url('assets/um.jpeg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.2em;
     }
     .container {
       padding: 30px 20px;
@@ -42,7 +63,7 @@
     }
     .speaker {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       margin-bottom: 20px;
       padding: 10px;
       border-radius: 8px;
@@ -60,6 +81,10 @@
       color: #0077cc;
       text-decoration: none;
     }
+    .speaker div em {
+      display: block;
+      margin-top: 5px;
+    }
     ul {
       padding-left: 20px;
     }
@@ -76,12 +101,12 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Mohism Symposium 2025</h1>
-    <p>August 21, 2025 | Morning Session</p>
-  </header>
-
-  <img class="main-image" src="assets/um.jpeg" alt="University of Macau Campus">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Mohism Symposium 2025</h1>
+      <p>August 21, 2025</p>
+    </div>
+  </section>
 
   <div class="container">
     <h2>About the Symposium</h2>
@@ -93,8 +118,10 @@
     <div class="speaker">
       <img src="assets/qingbiaoli.jpg" alt="Prof. Qingbiao Li">
       <div>
-        <strong>Host Institution:</strong> University of Macau<br>
-        <strong>Organizer:</strong> <a href="https://qingbiaoli.github.io/" target="_blank">Prof. Qingbiao Li</a>
+        <strong>Host Institution:</strong> <a href="https://www.mohismlab.com/" target="_blank">Mohism Lab, University of Macau</a><br>
+        <strong>Organizer:</strong> <a href="https://qingbiaoli.github.io/" target="_blank">Prof. Qingbiao Li</a><br>
+        <strong>Position:</strong> Assistant Professor at University of Macau.<br>
+        <strong>Research:</strong> Machine Learning-based Motion Control; Healthcare Imaging/Intelligent Agent; Surgical Robotics and Medical Systems; Multi-Robot Systems.
       </div>
     </div>
 
@@ -104,8 +131,9 @@
       <img src="assets/sethu.jpg" alt="Prof. Sethu Vijayakumar">
       <div>
         <strong>Prof. Sethu Vijayakumar</strong><br>
-        The University of Edinburgh<br>
-        <a href="https://homepages.inf.ed.ac.uk/svijayak/" target="_blank">Homepage</a>
+        <a href="https://homepages.inf.ed.ac.uk/svijayak/" target="_blank">Homepage</a><br>
+        <strong>Position:</strong> Fellow of the Royal Society of Edinburgh; Turing Fellow; Professor of Robotics & Computation, University of Edinburgh; Director of CRAS.<br>
+        <strong>Research:</strong> Robotics control (e.g., NASA Valkyrie robot), statistical machine learning, computational neuroscience for motor control, and embodied intelligence in space/industrial applications.
       </div>
     </div>
 
@@ -113,8 +141,9 @@
       <img src="assets/yungu.png" alt="Prof. Yun Gu">
       <div>
         <strong>Prof. Yun Gu</strong><br>
-        Shanghai Jiao Tong University<br>
-        <a href="https://automation.sjtu.edu.cn/yungu" target="_blank">Homepage</a>
+        <a href="https://automation.sjtu.edu.cn/yungu" target="_blank">Homepage</a><br>
+        <strong>Position:</strong> Associate Professor at Shanghai Jiao Tong University's Department of Automation.<br>
+        <strong>Research:</strong> Medical image analysis (e.g., lung airway segmentation), computer-assisted surgery, surgical robot visual navigation for precision medicine.
       </div>
     </div>
 
@@ -122,8 +151,9 @@
       <img src="assets/chongjingcao.jpg" alt="Dr. Chongjing Cao">
       <div>
         <strong>Dr. Chongjing Cao</strong><br>
-        Shenzhen Institutes of Advanced Technology (SIAT)<br>
-        <a href="https://people.ucas.ac.cn/~0073488" target="_blank">Homepage</a>
+        <a href="https://people.ucas.ac.cn/~0073488" target="_blank">Homepage</a><br>
+        <strong>Position:</strong> Researcher at Shenzhen Institutes of Advanced Technology, CAS.<br>
+        <strong>Research:</strong> Soft robotics design, dielectric elastomer actuation, nonlinear dynamics, and rehabilitation robotics (published in Advanced Intelligent Systems).
       </div>
     </div>
 
@@ -131,8 +161,9 @@
       <img src="assets/haodong.png" alt="Prof. Hao Dong">
       <div>
         <strong>Prof. Hao Dong</strong><br>
-        Peking University<br>
-        <a href="https://cs.pku.edu.cn/info/1063/1618.htm" target="_blank">Homepage</a>
+        <a href="https://cs.pku.edu.cn/info/1063/1618.htm" target="_blank">Homepage</a><br>
+        <strong>Position:</strong> Assistant Professor at Peking University; Director of PKU-Agibot Lab.<br>
+        <strong>Research:</strong> Embodied AI, large-model-driven robotic manipulation, reinforcement learning, computer vision (leading open-source projects like TensorLayer, OpenMLsys).
       </div>
     </div>
 
@@ -140,8 +171,9 @@
       <img src="assets/shanghang.png" alt="Prof. Shanghang Zhang">
       <div>
         <strong>Prof. Shanghang Zhang</strong><br>
-        Peking University<br>
-        <a href="https://www.ai.pku.edu.cn/info/1139/2918.htm" target="_blank">Homepage</a>
+        <a href="https://www.ai.pku.edu.cn/info/1139/2918.htm" target="_blank">Homepage</a><br>
+        <strong>Position:</strong> Assistant Professor, PhD Supervisor at Peking University's School of Computer Science.<br>
+        <strong>Research:</strong> Open-world generalizable machine learning, brain-inspired visual perception, AI-driven scientific computing (published in top AI conferences/journals like NeurIPS).
       </div>
     </div>
 
