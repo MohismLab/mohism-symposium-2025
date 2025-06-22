@@ -22,7 +22,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
       text-align: center;
     }
     .hero::after {
@@ -36,14 +35,24 @@
     .hero-content {
       position: relative;
       z-index: 1;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .hero-content:hover {
+      transform: scale(1.02);
     }
     .hero h1 {
       font-size: 2.5em;
       margin: 0;
+      color: #2c3e50;
     }
     .hero p {
       margin-top: 10px;
       font-size: 1.2em;
+      color: #2c3e50;
     }
     .container {
       padding: 30px 20px;
@@ -69,6 +78,11 @@
       border-radius: 8px;
       background-color: #fafafa;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .speaker:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
     .speaker img {
       max-width: 120px;
@@ -80,10 +94,10 @@
     .speaker div a {
       color: #0077cc;
       text-decoration: none;
+      font-weight: bold;
     }
-    .speaker div em {
-      display: block;
-      margin-top: 5px;
+    .speaker div a:hover {
+      text-decoration: underline;
     }
     ul {
       padding-left: 20px;
@@ -130,8 +144,7 @@
     <div class="speaker">
       <img src="assets/sethu.jpg" alt="Prof. Sethu Vijayakumar">
       <div>
-        <strong>Prof. Sethu Vijayakumar</strong><br>
-        <a href="https://homepages.inf.ed.ac.uk/svijayak/" target="_blank">Homepage</a><br>
+        <strong><a href="https://homepages.inf.ed.ac.uk/svijayak/" target="_blank">Prof. Sethu Vijayakumar</a></strong><br>
         <strong>Position:</strong> Fellow of the Royal Society of Edinburgh; Turing Fellow; Professor of Robotics & Computation, University of Edinburgh; Director of CRAS.<br>
         <strong>Research:</strong> Robotics control (e.g., NASA Valkyrie robot), statistical machine learning, computational neuroscience for motor control, and embodied intelligence in space/industrial applications.
       </div>
@@ -140,8 +153,7 @@
     <div class="speaker">
       <img src="assets/yungu.png" alt="Prof. Yun Gu">
       <div>
-        <strong>Prof. Yun Gu</strong><br>
-        <a href="https://automation.sjtu.edu.cn/yungu" target="_blank">Homepage</a><br>
+        <strong><a href="https://automation.sjtu.edu.cn/yungu" target="_blank">Prof. Yun Gu</a></strong><br>
         <strong>Position:</strong> Associate Professor at Shanghai Jiao Tong University's Department of Automation.<br>
         <strong>Research:</strong> Medical image analysis (e.g., lung airway segmentation), computer-assisted surgery, surgical robot visual navigation for precision medicine.
       </div>
@@ -150,8 +162,7 @@
     <div class="speaker">
       <img src="assets/chongjingcao.jpg" alt="Dr. Chongjing Cao">
       <div>
-        <strong>Dr. Chongjing Cao</strong><br>
-        <a href="https://people.ucas.ac.cn/~0073488" target="_blank">Homepage</a><br>
+        <strong><a href="https://people.ucas.ac.cn/~0073488" target="_blank">Dr. Chongjing Cao</a></strong><br>
         <strong>Position:</strong> Researcher at Shenzhen Institutes of Advanced Technology, CAS.<br>
         <strong>Research:</strong> Soft robotics design, dielectric elastomer actuation, nonlinear dynamics, and rehabilitation robotics (published in Advanced Intelligent Systems).
       </div>
@@ -160,8 +171,7 @@
     <div class="speaker">
       <img src="assets/haodong.png" alt="Prof. Hao Dong">
       <div>
-        <strong>Prof. Hao Dong</strong><br>
-        <a href="https://cs.pku.edu.cn/info/1063/1618.htm" target="_blank">Homepage</a><br>
+        <strong><a href="https://cs.pku.edu.cn/info/1063/1618.htm" target="_blank">Prof. Hao Dong</a></strong><br>
         <strong>Position:</strong> Assistant Professor at Peking University; Director of PKU-Agibot Lab.<br>
         <strong>Research:</strong> Embodied AI, large-model-driven robotic manipulation, reinforcement learning, computer vision (leading open-source projects like TensorLayer, OpenMLsys).
       </div>
@@ -170,8 +180,7 @@
     <div class="speaker">
       <img src="assets/shanghang.png" alt="Prof. Shanghang Zhang">
       <div>
-        <strong>Prof. Shanghang Zhang</strong><br>
-        <a href="https://www.ai.pku.edu.cn/info/1139/2918.htm" target="_blank">Homepage</a><br>
+        <strong><a href="https://www.ai.pku.edu.cn/info/1139/2918.htm" target="_blank">Prof. Shanghang Zhang</a></strong><br>
         <strong>Position:</strong> Assistant Professor, PhD Supervisor at Peking University's School of Computer Science.<br>
         <strong>Research:</strong> Open-world generalizable machine learning, brain-inspired visual perception, AI-driven scientific computing (published in top AI conferences/journals like NeurIPS).
       </div>
